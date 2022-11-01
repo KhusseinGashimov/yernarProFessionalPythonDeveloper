@@ -1,0 +1,64 @@
+//main:../style.less
+.works {
+    margin: 2.8rem 0;
+}
+.works__nav {
+    display: flex;
+    justify-content: center;
+}
+.works__nav-link {
+    margin:0 1.2rem;
+    font-size: 0.8rem;
+    color: fade(@black, 70%);
+    text-decoration: none;
+    margin-bottom: 1.4rem;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.porfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    margin-bottom: 2.8rem;
+}
+.porfolio__col {
+    padding:1rem;
+    flex-basis: 33%;
+    
+}
+.porfolio__item {
+    overflow: hidden;
+    box-shadow: 0 0 4px fade(#000, 25%);
+    border-radius: 10px;
+    transition: box-shadow 0.2s linear;
+    &:hover{
+        box-shadow: 0 0 25px fade(#000, 25%);
+    }
+}
+.work__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.portfolio__content {
+    padding: 1rem 0.8rem;
+}
+.portfolio__cat {
+    text-transform:uppercase;
+    color:@black;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.portfolio__title {
+    display: flex;
+    justify-content: space-between;
+    text-transform:uppercase;
+    color:@black;
+    font-weight: 700;
+    font-size: 1.06rem;
+}
+.text-center {
+    text-align: center;
+}

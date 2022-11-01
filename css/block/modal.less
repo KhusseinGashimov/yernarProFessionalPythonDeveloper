@@ -1,0 +1,352 @@
+//main:../style.less
+.modals{
+    display: none;
+    background-color: fade(@gray, 50%);
+    paddin: 0 1rem;
+    position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+    z-index: 100;
+    overflow-x: hidden;
+    
+    &.show {
+        display: flex;
+    }
+}
+.modal__dialog {
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+    position: relative;
+    background-color: #fff;
+    transform: scale(0);
+    transition: transform 0.2s linear;
+    &--sm {
+        max-width: 900px;
+    }
+}
+.modal__work {
+    display: flex;
+}
+.modal__work1 {
+    width: 65%;
+    position: relative;
+    overflow:hidden;
+}
+.modal__work2 {
+    position: relative;
+    width: 35%;
+    padding:3.4rem 6.6rem 1rem 1.7rem
+}
+.modal__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%,-50%,0);
+}
+.modal__worktitle {
+    margin-bottom: .2rem;
+    font-size: 2.12rem;
+    color:@black;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+.modal__info {
+    color:@gray;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 2.2rem;
+        
+}
+.modal__client {
+    
+}
+.mc1 {
+    margin-bottom: 0.2rem;
+    font-size: 1.06rem;
+    color:@black;
+    font-weight: 700;
+}
+.mc2 {
+    margin-bottom: 2.2rem;
+    font-size: 0.94em;
+    font-style: italic;
+    color:@gray;
+}
+.modal__text {
+    margin-bottom: 8.66rem;
+    line-height: 2;
+    color: @gray;
+    font-size: 0.8rem;
+}
+.modal__close {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: none;
+    border:none;
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.15s linear;
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+.modal__footer {
+    width: 100%;
+    padding:0 1.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.modal__btn {
+    font-size: 0.94rem;
+    color:@black;
+    text-transform: uppercase;
+    background: none;
+    padding: 0;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+    
+}
+.fa-angle-left {
+    margin-right: 10px;
+    color:@black;
+    font-size: 0.94rem;
+}
+.fa-angle-right {
+    margin-left: 10px;
+    color:@black;
+    font-size: 0.94rem;
+}
+.modal__cn {
+    padding:5rem 1rem;
+}
+.modal__title {
+    margin-bottom: 3.6rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color:@black;
+    font-weight: 700;
+   
+}
+.text__center {
+    text-align: center;
+}
+.timeline {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    margin: 4.2rem auto;
+    position: relative;
+    
+    &:before {
+        content:"";
+        display: block;
+        width: 1px;
+        height: 100%;
+        
+        background-color: @black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+    }
+}
+.timeline__col {
+    width: 50%;
+    
+    &--left {
+        text-align: right;
+        padding-right:3.2rem;
+    }
+    
+    &--right {
+        
+        padding-left:3.2rem;
+    }
+}
+.timeline__title {
+    font-size: 1.2rem;
+    color:@black;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2.6rem;
+}
+.timeline__item {
+    margin-bottom: 2.6rem;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.timeline__date {
+    display: block;
+    text-decoration: underline;
+    color:@black;
+    font-size: 0.94rem;
+    margin-bottom: 0.8rem;
+    
+}
+.timeline__subtitle {
+    font-size: 1.06rem;
+    color:@black;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+.timeline__position {
+    font-style: italic;
+    color:@black;
+    font-size: 0.94rem;
+    
+}
+.timeline__text {
+    color:@gray;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 0.8rem;
+}
+.pr__bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    justify-content: center;
+}
+.progress__right {
+    padding-left: 1.2rem;
+}
+.progress__baritem {
+    width: 139px;
+    height: 6px;
+    background-color: #EFEFEF;
+    text-align: left;
+    
+}
+.progress__baritemp {
+    height: 100%;
+    background-color: @gray;
+    transition: width 0.2s linear;
+}
+.progress__bartitle {
+    font-size: 0.94rem;
+    font-weight: 300;
+}
+.pr__br {
+    display: flex;
+    align-items: center;
+}
+.progress__left {
+    width: 50%;
+}
+.progress__right {
+    width: 50%;
+    
+}
+.progress__bar {
+    margin-bottom: 2.6rem;
+}
+.contact {
+    display: flex;
+
+}
+.contact__left {
+    width: 47%;
+    padding: 2rem;
+}
+.contact__right {
+    width: 53%;
+    
+}
+.cn__img {
+    width: 100%;
+    margin-bottom: -4px;
+    margin-left: 1px;
+}
+.mb0 {
+    margin-bottom: 0;
+}
+.modal__subtitle {
+    text-transform: uppercase;
+    font-size: 1.06rem;
+    color:@black;
+    font-weight: 400;
+    
+}
+.contact__info {
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.94rem;
+    color:@black;
+    font-weight: 300;
+    i {
+        margin-right: 1rem;
+    }
+}
+.contact__infoitem {
+    display: flex;
+    align-items: center;
+}
+.fa-square-phone .fa-envelope {
+    font-size: 17px;
+}
+.label {
+    font-size: 12px;
+    font-weight: 700;
+    color:@black;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+}
+.input{
+    display: block;
+    width: 100%;
+    padding:1.3rem 1.8rem;
+    border:1px solid fade(#707070, 30%);
+    border-radius: 1.8rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.form__group {
+    margin-bottom: 1.8rem;
+}
+.textarea {
+    resize: none;
+    height: 200px;
+    display: block;
+    width: 100%;
+    border:1px solid fade(#707070, 30%);
+    border-radius: 1.8rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.text-right {
+    text-align: right;
+}
+.hide {
+    display: none;
+}
+.pb {
+    padding-bottom: 4rem;
+}
+
+
+
+
+

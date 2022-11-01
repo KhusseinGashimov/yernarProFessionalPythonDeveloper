@@ -1,0 +1,127 @@
+//main:../style.less
+.intro {
+
+}
+.intro__inner {
+    display: flex;
+    border-bottom: 1px solid fade(@gray, 30%);
+    padding-bottom: 120px;
+    padding-top: 103px;
+    position: relative;
+    background: url("../img/symbols.jpg") right top no-repeat;
+}
+.intro__content {
+    width: 50%;
+}
+.intro__photo {
+    position: absolute;
+    bottom:0;
+    right: 80px;
+    z-index: 1;
+}
+.intro__subtitle {
+    font-size: 2.13rem;
+    color:@black;
+    font-weight: 200;
+}
+.intro__title {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color:@black;
+    font-weight: 700;
+}
+.intro__text {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color:fade(@black, 70%);
+}
+.social {
+    margin-bottom: 42px;
+    display: flex;
+    
+    
+}
+.social__link {
+    margin-right: 10px;
+    text-decoration:none;
+    color:inherit;
+    transition: transform 0.2s linear;
+    
+    &:hover {
+        color:red;
+        transform: translateY(-5px);
+    }
+}
+.fa-brands {
+    font-size: 35px;
+    cursor:pointer;
+    transition: color 0.2s linear;
+    &:hover {
+        color:red;
+    }
+    
+    .fa-square-behance {
+    color: #1869ff;
+}
+.fa-square-dribbble {
+    color: #e51a68;
+}
+.fa-linkedin{
+    color: #007bb6;
+}
+.fa-square-facebook {
+    color:#3a5898;
+}
+.fa-square-instagram {
+    color:#13578a;
+}
+.fa-twitter {
+    color:#56acef;
+}
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 157px;
+    text-align: center;
+    border:1px solid @gray;
+    border-radius: 1.8em;
+    background: none;
+    font-family: inherit;
+    line-height: 1.1;
+    padding:1.05em 1.7em;
+    cursor: pointer;
+    
+    font-size: 1.06rem;
+    color:@black;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:background-color 0.2s linear, color 0.2s linear, box-shadow 0.2s linear, border-color 0.2s linear;
+    &:focus {
+        outline: none;
+    }
+    &:hover{
+        background-color: @black;
+        color:@white;
+        box-shadow: 2px 2px 10px fade(@black, 24%);
+        border-color: @black;
+    }
+    
+    + .btn {
+        margin-left: 1rem;
+    }
+    
+    
+    &--sm {
+        font-size: 0.94rem;
+        font-weight: 700;
+        border-width: 2px;
+    }
+    
+    &--thin {
+        min-width: 145px;
+        font-size: 0.8rem;
+    }
+}
+
